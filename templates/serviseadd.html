@@ -1,0 +1,62 @@
+ 
+
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="{% static 'login/style.css'%}">
+         
+    <!--<title>Login & Registration Form</title>-->
+</head>
+<body>
+    <div class="container">
+        <div class="forms" style="height:800px">
+            <div class="form">
+                <h1 style="height:20px">Servis add</h1>
+                <form action="/servisadd/" enctype="multipart/form-data" method="post">{% csrf_token %}
+                    <div class="input-field">
+                        <input type="text" name="ful" placeholder="Fullname">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="p" placeholder="Profession">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="a" placeholder="About me">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="f" placeholder="Facebook link">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="t" placeholder="Twitter link">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="i" placeholder="Instagram link">
+                    </div>
+                    <div class="input-field" >
+                        <input type="file" name="file" >
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Save">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration Form -->
+
+        </div>
+    </div>
+    <script src="{% static 'login/script.js'%}">
+    </script>
+</body>
+</html>
+
